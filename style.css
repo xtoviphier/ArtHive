@@ -17,7 +17,7 @@ body {
   position: relative;
 }
 
-/* Header with Logo & Button */
+/* Header */
 header {
   position: fixed;
   top: 0;
@@ -43,6 +43,7 @@ header {
   top: 1.5rem;
 }
 
+/* Join as Creator Button */
 .join-btn {
   background: none;
   color: #ECEEDF;
@@ -59,7 +60,7 @@ header {
   background: rgba(236, 237, 223, 0.1);
 }
 
-/* Hero Section – Full Screen Black */
+/* Hero Section */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -152,7 +153,8 @@ header {
     opacity: 0;
   }
 }
-/* Logo in Top Right */
+
+/* Logo in Top Right Corner */
 .logo-link {
   position: absolute;
   top: 1.5rem;
