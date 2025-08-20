@@ -48,10 +48,12 @@ header {
   background: #eee;
 }
 
-/* Gallery Room */
-.gallery-room {
-  height: 100vh;
+/* Fixed Container for Gallery Background */
+.gallery-fixed {
   position: relative;
+  width: 1341px;
+  height: 894px;
+  margin: 0 auto;
   overflow: hidden;
 }
 
