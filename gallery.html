@@ -16,47 +16,14 @@
 
   <!-- Gallery Room -->
   <main class="gallery-room">
-    <!-- Background Image -->
-    <div class="gallery-bg">
-      <img src="Gallery.png" alt="Art Gallery Room" />
-    </div>
+    <!-- Background Image with Clickable Hotspots -->
+    <img src="Gallery.png" alt="Art Gallery Room" usemap="#art-map" class="gallery-bg" />
 
-    <!-- Artworks -->
-    <div class="artwork-container">
-      <div class="artwork" data-art="Philus" data-artist="Christopher William Wambua" data-price="$180">
-        <img src="Philus.png" alt="Philus" />
-      </div>
-      <div class="artwork" data-art="VV" data-artist="Christopher William Wambua" data-price="$125">
-        <img src="VV.png" alt="VV" />
-      </div>
-      <div class="artwork" data-art="Fyer" data-artist="Christopher William Wambua" data-price="$1">
-        <img src="Fyer.png" alt="Fyer" />
-      </div>
-      <div class="artwork" data-art="Myror" data-artist="Christopher William Wambua" data-price="$120">
-        <img src="Myror.png" alt="Myror" />
-      </div>
-      <div class="artwork" data-art="Mortis" data-artist="Christopher William Wambua" data-price="$750">
-        <img src="Mortis.png" alt="Mortis" />
-      </div>
-      <div class="artwork" data-art="Fruity" data-artist="Christopher William Wambua" data-price="$600">
-        <img src="Fruity.png" alt="Fruity" />
-      </div>
-    </div>
-  </main>
-
-  <!-- Modal for Enlarged Art -->
-  <div id="artModal" class="modal">
-    <span class="close">&times;</span>
-    <div class="modal-content">
-      <img id="modalImage" src="" alt="Artwork" />
-      <div class="art-details">
-        <h3 id="artTitle"></h3>
-        <p><strong>Artist:</strong> <span id="artistName"></span></p>
-        <p><strong>Price:</strong> <span id="artPrice"></span></p>
-      </div>
-    </div>
-  </div>
-
-  <script src="gallery.js"></script>
-</body>
-</html>
+    <!-- Image Map for Artwork Hotspots -->
+    <map name="art-map">
+      <area shape="rect" coords="100,200,300,400" data-art="Philus" data-artist="Christopher William Wambua" data-price="$180" class="art-hotspot" alt="Philus">
+      <area shape="rect" coords="350,220,500,420" data-art="VV" data-artist="Christopher William Wambua" data-price="$125" class="art-hotspot" alt="VV">
+      <area shape="rect" coords="550,250,700,450" data-art="Fyer" data-artist="Christopher William Wambua" data-price="$1" class="art-hotspot" alt="Fyer">
+      <area shape="rect" coords="750,260,900,460" data-art="Myror" data-artist="Christopher William Wambua" data-price="$120" class="art-hotspot" alt="Myror">
+      <area shape="rect" coords="1000,230,1150,430" data-art="Mortis" data-artist="Christopher William Wambua" data-price="$750" class="art-hotspot" alt="Mortis">
+      <area shape="rect" coords="1200,210,1350,410" data-art="Fruity" data-artist="Christopher William Wambua" data
