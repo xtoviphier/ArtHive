@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artificium Alvearium – Visual Arts Gallery</title>
+  <link rel="stylesheet" href="gallery.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Artificium Alvearium</div>
+    <a href="index.html" class="back-btn">Back to Home</a>
+  </header>
+
+  <!-- Gallery Room -->
+  <main class="gallery-room">
+    <!-- Left Wall -->
+    <div class="wall left">
+      <div class="art" data-art="Neon Dreams" data-artist="Alex Rivera" data-price="$10">
+        <img src="https://via.placeholder.com/300x400" alt="Neon Dreams" />
+      </div>
+      <div class="art" data-art="Urban Jungle" data-artist="Samira Khan" data-price="$12">
+        <img src="https://via.placeholder.com/200x300" alt="Urban Jungle" />
+      </div>
+    </div>
+
+    <!-- Right Wall -->
+    <div class="wall right">
+      <div class="art" data-art="City Lights" data-artist="Maya Chen" data-price="$8">
+        <img src="https://via.placeholder.com/250x350" alt="City Lights" />
+      </div>
+      <div class="art" data-art="Desert Sky" data-artist="Liam Park" data-price="$15">
+        <img src="https://via.placeholder.com/300x400" alt="Desert Sky" />
+      </div>
+    </div>
+
+    <!-- Back Wall -->
+    <div class="wall back">
+      <div class="art" data-art="Midnight City" data-artist="Elena Mora" data-price="$18">
+        <img src="https://via.placeholder.com/200x300" alt="Midnight City" />
+      </div>
+      <div class="art" data-art="Ocean Waves" data-artist="Nina Lee" data-price="$14">
+        <img src="https://via.placeholder.com/250x350" alt="Ocean Waves" />
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal for Enlarged Art -->
+  <div id="artModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="Artwork" />
+      <div class="art-details">
+        <h3 id="artTitle"></h3>
+        <p><strong>Artist:</strong> <span id="artistName"></span></p>
+        <p><strong>Price:</strong> <span id="artPrice"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
