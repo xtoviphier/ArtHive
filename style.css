@@ -159,21 +159,22 @@ header {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
-  display: block;
-  width: 100px;
+  width: 60px;
   height: auto;
   transition: transform 0.3s ease;
+  z-index: 90;
 }
 
 .logo-img {
   width: 100%;
   height: auto;
   border: 1px solid #ECEEDF;
-  border-radius: 8px;
+  border-radius: 6px;
   background: rgba(236, 237, 223, 0.1);
-  padding: 0.2rem;
+  padding: 0.1rem;
 }
 
 .logo-link:hover {
   transform: scale(1.05);
 }
+
