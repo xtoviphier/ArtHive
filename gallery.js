@@ -1,5 +1,5 @@
 // Open modal when artwork is clicked
-document.querySelectorAll('.art').forEach(art => {
+document.querySelectorAll('.artwork').forEach(art => {
   art.addEventListener('click', () => {
     const title = art.dataset.art;
     const artist = art.dataset.artist;
