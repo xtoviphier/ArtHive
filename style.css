@@ -1,3 +1,6 @@
+/* Google Fonts - Must be at top */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700&display=swap');
+
 /* Reset & Dark Background */
 * {
   margin: 0;
@@ -28,11 +31,16 @@ header {
   background: transparent;
 }
 
+/* Logo - Centered at Top */
 .logo {
   font-family: 'Great Vibes', cursive;
   font-size: 2.4rem;
   color: #ECEEDF;
   text-decoration: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1.5rem;
 }
 
 .join-btn {
@@ -63,11 +71,27 @@ header {
   position: relative;
 }
 
+/* Main Title Animation */
+.main-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3.5rem;
+  color: #ECEEDF;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeIn 2s forwards 0.5s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
 /* Category Buttons */
 .category-buttons {
   display: flex;
   gap: 1.5rem;
-  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 .category-btn {
@@ -86,6 +110,17 @@ header {
 .category-btn:hover {
   background: rgba(236, 237, 223, 0.1);
   transform: translateY(-2px);
+}
+
+/* Post-Animation Tagline */
+.tagline {
+  font-size: 1.1rem;
+  color: #ECEEDF;
+  opacity: 0;
+  text-align: center;
+  max-width: 600px;
+  margin-top: 1rem;
+  transition: opacity 1s ease-in-out;
 }
 
 /* Animated "more than a billion" */
@@ -117,8 +152,3 @@ header {
     opacity: 0;
   }
 }
-
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-/* Note: "Gothic Los Angeles" is not on Google Fonts — we'll load it manually */
-
