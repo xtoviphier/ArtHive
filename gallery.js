@@ -1,5 +1,5 @@
 // Get all hotspot areas
-const hotspots = document.querySelectorAll('area');
+const hotspots = document.querySelectorAll('area.art-hotspot');
 
 // Open modal when hotspot is clicked
 hotspots.forEach(area => {
@@ -9,12 +9,7 @@ hotspots.forEach(area => {
     const title = area.dataset.art;
     const artist = area.dataset.artist;
     const price = area.dataset.price;
-    const imgSrc = area.alt === 'Philus' ? 'Philus.png' :
-                   area.alt === 'VV' ? 'VV.png' :
-                   area.alt === 'Fyer' ? 'Fyer.png' :
-                   area.alt === 'Myror' ? 'Myror.png' :
-                   area.alt === 'Mortis' ? 'Mortis.png' :
-                   area.alt === 'Fruity' ? 'Fruity.png' : '';
+    const imgSrc = `${title}.png`; // Assumes filenames: Philus.png, VV.png, etc.
 
     document.getElementById('modalImage').src = imgSrc;
     document.getElementById('artTitle').textContent = title;
