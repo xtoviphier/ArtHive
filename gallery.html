@@ -21,9 +21,28 @@
 
     <!-- Image Map for Artwork Hotspots -->
     <map name="art-map">
-      <area shape="rect" coords="100,200,300,400" data-art="Philus" data-artist="Christopher William Wambua" data-price="$180" class="art-hotspot" alt="Philus">
-      <area shape="rect" coords="350,220,500,420" data-art="VV" data-artist="Christopher William Wambua" data-price="$125" class="art-hotspot" alt="VV">
-      <area shape="rect" coords="550,250,700,450" data-art="Fyer" data-artist="Christopher William Wambua" data-price="$1" class="art-hotspot" alt="Fyer">
-      <area shape="rect" coords="750,260,900,460" data-art="Myror" data-artist="Christopher William Wambua" data-price="$120" class="art-hotspot" alt="Myror">
-      <area shape="rect" coords="1000,230,1150,430" data-art="Mortis" data-artist="Christopher William Wambua" data-price="$750" class="art-hotspot" alt="Mortis">
-      <area shape="rect" coords="1200,210,1350,410" data-art="Fruity" data-artist="Christopher William Wambua" data
+      <area shape="rect" coords="233,421,37,246" data-art="Philus" data-artist="Christopher William Wambua" data-price="$180" class="art-hotspot" alt="Philus" />
+      <area shape="rect" coords="365,375,263,293" data-art="VV" data-artist="Christopher William Wambua" data-price="$125" class="art-hotspot" alt="VV" />
+      <area shape="rect" coords="496,373,416,328" data-art="Fyer" data-artist="Christopher William Wambua" data-price="$1" class="art-hotspot" alt="Fyer" />
+      <area shape="rect" coords="759,418,555,293" data-art="Myror" data-artist="Christopher William Wambua" data-price="$120" class="art-hotspot" alt="Myror" />
+      <area shape="rect" coords="957,405,783,300" data-art="Mortis" data-artist="Christopher William Wambua" data-price="$750" class="art-hotspot" alt="Mortis" />
+      <area shape="rect" coords="1327,423,1145,294" data-art="Fruity" data-artist="Christopher William Wambua" data-price="$600" class="art-hotspot" alt="Fruity" />
+    </map>
+  </main>
+
+  <!-- Modal for Enlarged Art -->
+  <div id="artModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="Artwork" />
+      <div class="art-details">
+        <h3 id="artTitle"></h3>
+        <p><strong>Artist:</strong> <span id="artistName"></span></p>
+        <p><strong>Price:</strong> <span id="artPrice"></span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="gallery.js"></script>
+</body>
+</html>
