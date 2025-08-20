@@ -16,28 +16,19 @@
 
   <!-- Gallery Room -->
   <main class="gallery-room">
-    <!-- Background Image with Clickable Hotspots -->
-    <img src="Gallery.png" alt="Art Gallery Room" usemap="#art-map" class="gallery-bg" />
+    <!-- Fixed-Size Background Image -->
+    <div class="gallery-fixed">
+      <img src="Gallery.png" alt="Art Gallery Room" usemap="#art-map" class="gallery-bg" />
+    </div>
 
     <!-- Image Map for Artwork Hotspots -->
     <map name="art-map">
-      <!-- Philus: +2 right, +3 up -->
-      <area shape="rect" coords="208,216,24,420" data-art="Philus" data-artist="Christopher William Wambua" data-price="$180" class="art-hotspot" alt="Philus" />
-      
-      <!-- VV: +4 right, +4 up -->
-      <area shape="rect" coords="367,277,263,367" data-art="VV" data-artist="Christopher William Wambua" data-price="$125" class="art-hotspot" alt="VV" />
-      
-      <!-- Fyer: +4 right, +4 up -->
-      <area shape="rect" coords="512,303,426,362" data-art="Fyer" data-artist="Christopher William Wambua" data-price="$1" class="art-hotspot" alt="Fyer" />
-      
-      <!-- Myror: +4 right, +3 up -->
-      <area shape="rect" coords="569,275,773,400" data-art="Myror" data-artist="Christopher William Wambua" data-price="$120" class="art-hotspot" alt="Myror" />
-      
-      <!-- Mortis: +4 right, +3 up -->
-      <area shape="rect" coords="979,284,807,395" data-art="Mortis" data-artist="Christopher William Wambua" data-price="$750" class="art-hotspot" alt="Mortis" />
-      
-      <!-- Fruity: +4 right, +2 up -->
-      <area shape="rect" coords="1350,275,1166,406" data-art="Fruity" data-artist="Christopher William Wambua" data-price="$600" class="art-hotspot" alt="Fruity" />
+      <area shape="rect" coords="208,216,24,420" data-art="Philus" data-artist="Christopher William Wambua" data-price="$180" alt="Philus" />
+      <area shape="rect" coords="367,277,263,367" data-art="VV" data-artist="Christopher William Wambua" data-price="$125" alt="VV" />
+      <area shape="rect" coords="512,303,426,362" data-art="Fyer" data-artist="Christopher William Wambua" data-price="$1" alt="Fyer" />
+      <area shape="rect" coords="569,275,773,400" data-art="Myror" data-artist="Christopher William Wambua" data-price="$120" alt="Myror" />
+      <area shape="rect" coords="979,284,807,395" data-art="Mortis" data-artist="Christopher William Wambua" data-price="$750" alt="Mortis" />
+      <area shape="rect" coords="1350,275,1166,406" data-art="Fruity" data-artist="Christopher William Wambua" data-price="$600" alt="Fruity" />
     </map>
   </main>
 
@@ -57,4 +48,3 @@
   <script src="gallery.js"></script>
 </body>
 </html>
-
