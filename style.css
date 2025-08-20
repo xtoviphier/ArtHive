@@ -29,11 +29,10 @@ header {
 }
 
 .logo {
-  font-family: 'Gothic Los Angeles', cursive, sans-serif;
-  font-size: 2rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.4rem;
   color: #ECEEDF;
   text-decoration: none;
-  font-weight: normal;
 }
 
 .join-btn {
@@ -122,3 +121,4 @@ header {
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 /* Note: "Gothic Los Angeles" is not on Google Fonts — we'll load it manually */
+
