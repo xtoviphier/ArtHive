@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artificium Alvearium – Music</title>
+  <link rel="stylesheet" href="music.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Visio in Membrana</div>
+    <a href="index.html" class="back-btn">Back to Home</a>
+  </header>
+
+  <!-- Music Room -->
+  <main class="music-room">
+    <!-- Background Image -->
+    <div class="music-bg">
+      <img src="Studio.png" alt="Music Studio" />
+    </div>
+
+    <!-- Audio Player -->
+    <div class="player-container">
+      <audio id="musicPlayer" controls>
+        <source src="22.1.24.wav" type="audio/wav">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="control left" onclick="prevSong()">◀️ Previous</div>
+      <div class="control center" onclick="togglePlay()">⏸️ Play/Pause</div>
+      <div class="control right" onclick="nextSong()">▶️ Next</div>
+    </div>
+
+    <!-- Song Details -->
+    <div class="details-panel">
+      <p id="artist">Artist:</p>
+      <p id="title">Title:</p>
+      <p id="price">Price:</p>
+    </div>
+  </main>
+
+  <script src="music.js"></script>
+</body>
+</html>
