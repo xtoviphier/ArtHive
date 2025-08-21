@@ -10,7 +10,7 @@ const videos = [
 let currentVideoIndex = 0;
 const movieScreen = document.getElementById('movieScreen');
 
-// Video details — artist, title, price
+// Video details
 const videoDetails = [
   { artist: "Christopher William Wambua", title: "AD", price: "$1,600" },
   { artist: "Christopher William Wambua", title: "SHIP", price: "$300" },
@@ -41,9 +41,9 @@ const videoDetails = [
 function loadVideo(index) {
   if (index >= 0 && index < videos.length) {
     movieScreen.src = videos[index];
-    movieScreen.load();
+    movieScreen.load(); // Load metadata but don't play
     
-    // Update details in correct order
+    // Update details
     const details = videoDetails[index];
     document.getElementById('artist').textContent = "Artist: " + details.artist;
     document.getElementById('title').textContent = "Title: " + details.title;
@@ -64,14 +64,14 @@ function togglePlay() {
 function nextVideo() {
   currentVideoIndex = (currentVideoIndex + 1) % videos.length;
   loadVideo(currentVideoIndex);
-  movieScreen.play();
+  movieScreen.play(); // Play after loading
 }
 
 // Previous video
 function prevVideo() {
   currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
   loadVideo(currentVideoIndex);
-  movieScreen.play();
+  movieScreen.play(); // Play after loading
 }
 
 // Make screen clickable for navigation
@@ -99,7 +99,7 @@ movieScreen.addEventListener('ended', () => {
   movieScreen.play();
 });
 
-// Load first video on page load
+// Load first video on page load (but don't autoplay)
 window.onload = () => {
   loadVideo(currentVideoIndex);
 };
