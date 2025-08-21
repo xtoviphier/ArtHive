@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Artificium Alvearium – Cinema</title>
+  <title>Artificium Alvearium – Visio in Membrana</title>
   <link rel="stylesheet" href="cinema.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -31,14 +31,14 @@
 
     <!-- Controls -->
     <div class="controls">
-      <div class="control left" onclick="prevVideo()">◀️ Previous</div>
-      <div class="control center" onclick="togglePlay()">⏸️ Pause/Play</div>
-      <div class="control right" onclick="nextVideo()">▶️ Next</div>
+      <button class="ctrl-btn prev" onclick="prevVideo()">◀️ Previous</button>
+      <button class="ctrl-btn play-pause" onclick="togglePlay()">⏸️ Play / Pause</button>
+      <button class="ctrl-btn next" onclick="nextVideo()">▶️ Next</button>
     </div>
 
     <!-- Video Details -->
     <div class="details-panel">
-      <h3 id="artist">Artist:</h3>
+      <p id="artist">Artist:</p>
       <p id="title">Title:</p>
       <p id="price">Price:</p>
     </div>
@@ -47,5 +47,3 @@
   <script src="cinema.js"></script>
 </body>
 </html>
-
-
