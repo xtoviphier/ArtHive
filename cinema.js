@@ -10,11 +10,44 @@ const videos = [
 let currentVideoIndex = 0;
 const movieScreen = document.getElementById('movieScreen');
 
+// Video details
+const videoDetails = [
+  { title: "AD", price: "$1,600" },
+  { title: "SHIP", price: "$300" },
+  { title: "RUN", price: "$340" },
+  { title: "Applegrin", price: "$10" },
+  { title: "blueski", price: "$10" },
+  { title: "blued", price: "$10" },
+  { title: "Dance1APPLE", price: "$10" },
+  { title: "Dance1Lightblue", price: "$10" },
+  { title: "galaxE", price: "$10" },
+  { title: "NebulaDance", price: "$10" },
+  { title: "Purpski", price: "$10" },
+  { title: "PurrpDans", price: "$10" },
+  { title: "budblood", price: "$5" },
+  { title: "chocolatebud", price: "$5" },
+  { title: "earthbud", price: "$5" },
+  { title: "galaxybud", price: "$5" },
+  { title: "LVbud", price: "$5" },
+  { title: "Marblebud", price: "$5" },
+  { title: "Marblebud2", price: "$5" },
+  { title: "Moonbud", price: "$5" },
+  { title: "OGbud", price: "$5" },
+  { title: "onebud", price: "$5" },
+  { title: "vibraniumbud", price: "$5" }
+];
+
 // Load first video
 function loadVideo(index) {
   if (index >= 0 && index < videos.length) {
     movieScreen.src = videos[index];
     movieScreen.load();
+    
+    // Update details
+    const details = videoDetails[index];
+    document.getElementById('artist').textContent = "Artist: Christopher William Wambua";
+    document.getElementById('title').textContent = "Title: " + details.title;
+    document.getElementById('price').textContent = "Price: " + details.price;
   }
 }
 
@@ -41,18 +74,12 @@ function prevVideo() {
   movieScreen.play();
 }
 
-// Auto-play next video when current one ends
-movieScreen.addEventListener('ended', () => {
-  nextVideo();
-});
-
 // Make screen clickable for navigation
 document.addEventListener('click', (e) => {
   const rect = movieScreen.getBoundingClientRect();
   const x = e.clientX - rect.left;
-  const y = e.clientY - rect.top;
 
-  // Left side of screen → previous
+  // Left side → previous
   if (x < rect.width / 2) {
     prevVideo();
   }
@@ -64,6 +91,12 @@ document.addEventListener('click', (e) => {
   else {
     togglePlay();
   }
+});
+
+// Auto-loop video when it ends
+movieScreen.addEventListener('ended', () => {
+  movieScreen.currentTime = 0;
+  movieScreen.play();
 });
 
 // Load first video on page load
