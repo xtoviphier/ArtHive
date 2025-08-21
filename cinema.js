@@ -1,4 +1,4 @@
-// Video files array (replace with your 23 video names)
+// Video files array
 const videos = [
   "video1.mp4", "video2.mp4", "video3.mp4", "video4.mp4", "video5.mp4",
   "video6.mp4", "video7.mp4", "video8.mp4", "video9.mp4", "video10.mp4",
@@ -10,31 +10,31 @@ const videos = [
 let currentVideoIndex = 0;
 const movieScreen = document.getElementById('movieScreen');
 
-// Video details
+// Video details — artist, title, price
 const videoDetails = [
-  { title: "AD", price: "$1,600" },
-  { title: "SHIP", price: "$300" },
-  { title: "RUN", price: "$340" },
-  { title: "Applegrin", price: "$10" },
-  { title: "blueski", price: "$10" },
-  { title: "blued", price: "$10" },
-  { title: "Dance1APPLE", price: "$10" },
-  { title: "Dance1Lightblue", price: "$10" },
-  { title: "galaxE", price: "$10" },
-  { title: "NebulaDance", price: "$10" },
-  { title: "Purpski", price: "$10" },
-  { title: "PurrpDans", price: "$10" },
-  { title: "budblood", price: "$5" },
-  { title: "chocolatebud", price: "$5" },
-  { title: "earthbud", price: "$5" },
-  { title: "galaxybud", price: "$5" },
-  { title: "LVbud", price: "$5" },
-  { title: "Marblebud", price: "$5" },
-  { title: "Marblebud2", price: "$5" },
-  { title: "Moonbud", price: "$5" },
-  { title: "OGbud", price: "$5" },
-  { title: "onebud", price: "$5" },
-  { title: "vibraniumbud", price: "$5" }
+  { artist: "Christopher William Wambua", title: "AD", price: "$1,600" },
+  { artist: "Christopher William Wambua", title: "SHIP", price: "$300" },
+  { artist: "Christopher William Wambua", title: "RUN", price: "$340" },
+  { artist: "Christopher William Wambua", title: "Applegrin", price: "$10" },
+  { artist: "Christopher William Wambua", title: "blueski", price: "$10" },
+  { artist: "Christopher William Wambua", title: "blued", price: "$10" },
+  { artist: "Christopher William Wambua", title: "Dance1APPLE", price: "$10" },
+  { artist: "Christopher William Wambua", title: "Dance1Lightblue", price: "$10" },
+  { artist: "Christopher William Wambua", title: "galaxE", price: "$10" },
+  { artist: "Christopher William Wambua", title: "NebulaDance", price: "$10" },
+  { artist: "Christopher William Wambua", title: "Purpski", price: "$10" },
+  { artist: "Christopher William Wambua", title: "PurrpDans", price: "$10" },
+  { artist: "Christopher William Wambua", title: "budblood", price: "$5" },
+  { artist: "Christopher William Wambua", title: "chocolatebud", price: "$5" },
+  { artist: "Christopher William Wambua", title: "earthbud", price: "$5" },
+  { artist: "Christopher William Wambua", title: "galaxybud", price: "$5" },
+  { artist: "Christopher William Wambua", title: "LVbud", price: "$5" },
+  { artist: "Christopher William Wambua", title: "Marblebud", price: "$5" },
+  { artist: "Christopher William Wambua", title: "Marblebud2", price: "$5" },
+  { artist: "Christopher William Wambua", title: "Moonbud", price: "$5" },
+  { artist: "Christopher William Wambua", title: "OGbud", price: "$5" },
+  { artist: "Christopher William Wambua", title: "onebud", price: "$5" },
+  { artist: "Christopher William Wambua", title: "vibraniumbud", price: "$5" }
 ];
 
 // Load first video
@@ -43,9 +43,9 @@ function loadVideo(index) {
     movieScreen.src = videos[index];
     movieScreen.load();
     
-    // Update details
+    // Update details in correct order
     const details = videoDetails[index];
-    document.getElementById('artist').textContent = "Artist: Christopher William Wambua";
+    document.getElementById('artist').textContent = "Artist: " + details.artist;
     document.getElementById('title').textContent = "Title: " + details.title;
     document.getElementById('price').textContent = "Price: " + details.price;
   }
