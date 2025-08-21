@@ -130,3 +130,26 @@ header {
 .center {
   background: rgba(0,0,255,0.7);
 }
+
+/* Details Panel */
+.details-panel {
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 200px;
+  z-index: 4;
+}
+
+.details-panel h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.details-panel p {
+  margin: 0.3rem 0;
+}
