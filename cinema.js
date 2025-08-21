@@ -41,7 +41,7 @@ const videoDetails = [
 function loadVideo(index) {
   if (index >= 0 && index < videos.length) {
     movieScreen.src = videos[index];
-    movieScreen.load(); // Load metadata but don't play
+    movieScreen.load();
     
     // Update details
     const details = videoDetails[index];
@@ -64,34 +64,15 @@ function togglePlay() {
 function nextVideo() {
   currentVideoIndex = (currentVideoIndex + 1) % videos.length;
   loadVideo(currentVideoIndex);
-  movieScreen.play(); // Play after loading
+  movieScreen.play();
 }
 
 // Previous video
 function prevVideo() {
   currentVideoIndex = (currentVideoIndex - 1 + videos.length) % videos.length;
   loadVideo(currentVideoIndex);
-  movieScreen.play(); // Play after loading
+  movieScreen.play();
 }
-
-// Make screen clickable for navigation
-document.addEventListener('click', (e) => {
-  const rect = movieScreen.getBoundingClientRect();
-  const x = e.clientX - rect.left;
-
-  // Left side → previous
-  if (x < rect.width / 2) {
-    prevVideo();
-  }
-  // Right side → next
-  else if (x > rect.width / 2) {
-    nextVideo();
-  }
-  // Center → pause/play
-  else {
-    togglePlay();
-  }
-});
 
 // Auto-loop video when it ends
 movieScreen.addEventListener('ended', () => {
