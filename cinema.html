@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artificium Alvearium – Cinema</title>
+  <link rel="stylesheet" href="cinema.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">Cinema</div>
+    <a href="index.html" class="back-btn">Back to Home</a>
+  </header>
+
+  <!-- Cinema Room -->
+  <main class="cinema-room">
+    <!-- Background Image -->
+    <div class="cinema-bg">
+      <img src="Theatre.png" alt="Cinema Theater" />
+    </div>
+
+    <!-- Video Screen -->
+    <div class="screen-container">
+      <video id="movieScreen" autoplay muted controls>
+        <source src="video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <div class="control left" onclick="prevVideo()">◀️ Previous</div>
+      <div class="control center" onclick="togglePlay()">⏸️ Pause/Play</div>
+      <div class="control right" onclick="nextVideo()">▶️ Next</div>
+    </div>
+  </main>
+
+  <script src="cinema.js"></script>
+</body>
+</html>
