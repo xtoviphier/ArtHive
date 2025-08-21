@@ -106,8 +106,8 @@ const songDetails = [
   { artist: "Pharaoh", title: "tuff.bt", price: "$10" },
   { artist: "Pharaoh", title: "untitled", price: "$65" },
   { artist: "Pharaoh", title: "untitled tears", price: "$80" },
-  { artist: "Pharaoh", title: "yTan", price: "$75" },
-  { artist: "Pharaoh", title: "yTekrev", price: "$75" },
+  { artist: "Pharaoh", title: "ydek", price: "$75" },
+  { artist: "Pharaoh", title: "ydekrev", price: "$75" },
   { artist: "Pharaoh", title: "ymcmb", price: "$100" }
 ];
 
@@ -147,5 +147,6 @@ function prevSong() {
   loadSong(currentSongIndex);
   musicPlayer.play();
 }
+
 
 // Make player clickable for navigation
